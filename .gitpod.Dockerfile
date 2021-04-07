@@ -31,3 +31,4 @@ RUN yes | Android/Sdk/cmdline-tools/latest/bin/sdkmanager --licenses | tee -a /t
 
 ENV ANDROID_SDK_ROOT="$HOME/Android/Sdk"
 
+ENV PATH=$ANDROID_SDK_ROOT/platform-tools:$PATH
