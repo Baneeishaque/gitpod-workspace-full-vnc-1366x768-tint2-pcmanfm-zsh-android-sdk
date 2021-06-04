@@ -13,6 +13,6 @@
 ### Base Image : [baneeishaque/gitpod-workspace-full-vnc-1366x768-tint2-pcmanfm-zsh](https://hub.docker.com/repository/docker/baneeishaque/gitpod-workspace-full-vnc-1366x768-tint2-pcmanfm-zsh)  
 
 ## Additional Tools
-### &nbsp;&nbsp; - Android SDK : 30
+### &nbsp;&nbsp; - Android SDK
 
 [//]: # "[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/Baneeishaque/gitpod-workspace-full-vnc-1366x768-tint2-pcmanfm-zsh-android-sdk)"
