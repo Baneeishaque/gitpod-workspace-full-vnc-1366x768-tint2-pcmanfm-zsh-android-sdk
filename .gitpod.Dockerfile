@@ -4,8 +4,8 @@ ARG androidCommandLineToolsLinuxDownloadUrl="https://dl.google.com/android/repos
 ARG androidCommandLineToolsLinuxInstallationFile="commandlinetools-linux-6858069_latest.zip"
 
 RUN cd $HOME \
- && wget $androidCommandLineToolsLinuxDownloadUrl | tee -a /tmp/wget-androidCommandLineToolsLinux.log \
- && unzip $androidCommandLineToolsLinuxInstallationFile | tee -a /tmp/unzip-androidCommandLineToolsLinux.log\
+ && wget $androidCommandLineToolsLinuxDownloadUrl \
+ && unzip $androidCommandLineToolsLinuxInstallationFile \
  && mkdir -p Android/Sdk/cmdline-tools/latest \
  && mv cmdline-tools/* Android/Sdk/cmdline-tools/latest/ \
  && rmdir cmdline-tools/ \
@@ -26,8 +26,8 @@ ARG androidBuildToolsVersion="30.0.3"
 # RUN yes | Android/Sdk/cmdline-tools/latest/bin/sdkmanager --licenses \
  # && Android/Sdk/cmdline-tools/latest/bin/sdkmanager "platforms;$androidPlatformVersion" "build-tools;$androidBuildToolsVersion" "sources;$androidPlatformVersion" "cmake;$cmakeVersion" "ndk;$ndkVersion"
 
-RUN yes | Android/Sdk/cmdline-tools/latest/bin/sdkmanager --licenses | tee -a /tmp/yes-androidSdkLicenses.log \
- && Android/Sdk/cmdline-tools/latest/bin/sdkmanager "platforms;$androidPlatformVersion" "build-tools;$androidBuildToolsVersion" "sources;$androidPlatformVersion" | tee -a /tmp/androidSdkManager.log
+RUN yes | Android/Sdk/cmdline-tools/latest/bin/sdkmanager --licenses \
+ && Android/Sdk/cmdline-tools/latest/bin/sdkmanager "platforms;$androidPlatformVersion" "build-tools;$androidBuildToolsVersion" "sources;$androidPlatformVersion"
 
 ENV ANDROID_SDK_ROOT="$HOME/Android/Sdk"
 
