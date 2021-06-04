@@ -13,8 +13,8 @@ RUN cd $HOME \
 
 ENV JAVA_HOME="$HOME/.sdkman/candidates/java/current"
 
-ARG androidPlatformVersion="android-30"
-ARG androidBuildToolsVersion="30.0.3"
+# ARG androidPlatformVersion="android-30"
+# ARG androidBuildToolsVersion="30.0.3"
 # ARG androidPlatformPreviewVersion="android-S"
 # ARG androidBuildToolsPreviewVersion="31.0.0-rc1"
 # ARG cmakeVersion="3.10.2.4988404"
@@ -26,8 +26,10 @@ ARG androidBuildToolsVersion="30.0.3"
 # RUN yes | Android/Sdk/cmdline-tools/latest/bin/sdkmanager --licenses \
  # && Android/Sdk/cmdline-tools/latest/bin/sdkmanager "platforms;$androidPlatformVersion" "build-tools;$androidBuildToolsVersion" "sources;$androidPlatformVersion" "cmake;$cmakeVersion" "ndk;$ndkVersion"
 
-RUN yes | Android/Sdk/cmdline-tools/latest/bin/sdkmanager --licenses \
- && Android/Sdk/cmdline-tools/latest/bin/sdkmanager "platforms;$androidPlatformVersion" "build-tools;$androidBuildToolsVersion" "sources;$androidPlatformVersion"
+# RUN yes | Android/Sdk/cmdline-tools/latest/bin/sdkmanager --licenses \
+#  && Android/Sdk/cmdline-tools/latest/bin/sdkmanager "platforms;$androidPlatformVersion" "build-tools;$androidBuildToolsVersion" "sources;$androidPlatformVersion"
+
+RUN yes | Android/Sdk/cmdline-tools/latest/bin/sdkmanager --licenses
 
 ENV ANDROID_SDK_ROOT="$HOME/Android/Sdk"
 
