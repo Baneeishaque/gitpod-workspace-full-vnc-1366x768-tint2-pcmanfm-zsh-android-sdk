@@ -1,16 +1,14 @@
 FROM baneeishaque/gitpod-workspace-full-vnc-1366x768-tint2-pcmanfm-zsh
 
 ARG androidCommandLineToolsLinuxDownloadUrl="https://dl.google.com/android/repository/commandlinetools-linux-8092744_latest.zip"
-#TODO : Get filename from URL
-ARG androidCommandLineToolsLinuxInstallationFile="commandlinetools-linux-8092744_latest.zip"
 
 RUN cd $HOME \
  && wget $androidCommandLineToolsLinuxDownloadUrl \
- && unzip $androidCommandLineToolsLinuxInstallationFile \
+ && unzip `basename $androidCommandLineToolsLinuxDownloadUrl` \
  && mkdir -p Android/Sdk/cmdline-tools/latest \
  && mv cmdline-tools/* Android/Sdk/cmdline-tools/latest/ \
  && rmdir cmdline-tools/ \
- && rm $androidCommandLineToolsLinuxInstallationFile
+ && rm `basename $androidCommandLineToolsLinuxDownloadUrl`
 
 ENV JAVA_HOME="$HOME/.sdkman/candidates/java/current"
 
