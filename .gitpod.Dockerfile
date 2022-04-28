@@ -1,7 +1,8 @@
 FROM baneeishaque/gitpod-workspace-full-vnc-1366x768-tint2-pcmanfm-zsh
 
-ARG androidCommandLineToolsLinuxDownloadUrl="https://dl.google.com/android/repository/commandlinetools-linux-6858069_latest.zip"
-ARG androidCommandLineToolsLinuxInstallationFile="commandlinetools-linux-6858069_latest.zip"
+ARG androidCommandLineToolsLinuxDownloadUrl="https://dl.google.com/android/repository/commandlinetools-linux-8092744_latest.zip"
+#TODO : Get filename from URL
+ARG androidCommandLineToolsLinuxInstallationFile="commandlinetools-linux-8092744_latest.zip"
 
 RUN cd $HOME \
  && wget $androidCommandLineToolsLinuxDownloadUrl \
