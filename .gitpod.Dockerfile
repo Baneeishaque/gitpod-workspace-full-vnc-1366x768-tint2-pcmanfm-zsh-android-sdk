@@ -28,7 +28,7 @@ ARG androidSourcesPlatformVersion="android-31"
  # && Android/Sdk/cmdline-tools/latest/bin/sdkmanager "platforms;$androidPlatformVersion" "build-tools;$androidBuildToolsVersion" "sources;$androidPlatformVersion" "cmake;$cmakeVersion" "ndk;$ndkVersion"
 
 RUN yes | Android/Sdk/cmdline-tools/latest/bin/sdkmanager --licenses \
- && Android/Sdk/cmdline-tools/latest/bin/sdkmanager "platforms;$androidPlatformVersion" "build-tools;$androidBuildToolsVersion" "sources;$androidSourcesPlatformVersion"
+ && Android/Sdk/cmdline-tools/latest/bin/sdkmanager "platforms;$androidPlatformVersion" "build-tools;$androidBuildToolsVersion" "platforms;$androidSourcesPlatformVersion" "sources;$androidSourcesPlatformVersion"
 
 # RUN yes | Android/Sdk/cmdline-tools/latest/bin/sdkmanager --licenses
 
