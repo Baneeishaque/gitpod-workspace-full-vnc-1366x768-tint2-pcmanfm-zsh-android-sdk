@@ -1,7 +1,7 @@
 # Gitpod Full VNC Workspace On 1366x768 Resolution With Tint2, PCMan File Manager, ZSH with Oh My ZSH & Android SDK
 
-![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/baneeishaque/gitpod-workspace-full-vnc-1366x768-tint2-pcmanfm-zsh-android-sdk)
-![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/baneeishaque/gitpod-workspace-full-vnc-1366x768-tint2-pcmanfm-zsh-android-sdk)
+[//]: # "![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/baneeishaque/gitpod-workspace-full-vnc-1366x768-tint2-pcmanfm-zsh-android-sdk)"
+[//]: # "![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/baneeishaque/gitpod-workspace-full-vnc-1366x768-tint2-pcmanfm-zsh-android-sdk)"
 ![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/baneeishaque/gitpod-workspace-full-vnc-1366x768-tint2-pcmanfm-zsh-android-sdk/latest)
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/baneeishaque/gitpod-workspace-full-vnc-1366x768-tint2-pcmanfm-zsh-android-sdk/latest)
 ![Docker Pulls](https://img.shields.io/docker/pulls/baneeishaque/gitpod-workspace-full-vnc-1366x768-tint2-pcmanfm-zsh-android-sdk)
