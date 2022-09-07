@@ -20,16 +20,19 @@ ARG androidSourcesPlatformVersion="android-31"
 # ARG cmakeVersion="3.10.2.4988404"
 # ARG ndkVersion="22.0.7026061"
 
+# RUN yes | Android/Sdk/cmdline-tools/latest/bin/sdkmanager --licenses
+
+RUN yes | Android/Sdk/cmdline-tools/latest/bin/sdkmanager --licenses \
+ && Android/Sdk/cmdline-tools/latest/bin/sdkmanager "platforms;$androidPlatformVersion" "build-tools;$androidBuildToolsVersion" "sources;$androidSourcesPlatformVersion"
+
 # RUN yes | Android/Sdk/cmdline-tools/latest/bin/sdkmanager --licenses \
- # && Android/Sdk/cmdline-tools/latest/bin/sdkmanager "platforms;$androidPlatformVersion" "build-tools;$androidBuildToolsVersion" "sources;$androidPlatformVersion" "platforms;$androidPlatformPreviewVersion" "build-tools;$androidBuildToolsPreviewVersion" "cmake;$cmakeVersion" "ndk;$ndkVersion"
+#  && Android/Sdk/cmdline-tools/latest/bin/sdkmanager "platforms;$androidPlatformVersion" "build-tools;$androidBuildToolsVersion" "platforms;$androidSourcesPlatformVersion" "sources;$androidSourcesPlatformVersion"
 
 # RUN yes | Android/Sdk/cmdline-tools/latest/bin/sdkmanager --licenses \
  # && Android/Sdk/cmdline-tools/latest/bin/sdkmanager "platforms;$androidPlatformVersion" "build-tools;$androidBuildToolsVersion" "sources;$androidPlatformVersion" "cmake;$cmakeVersion" "ndk;$ndkVersion"
 
-RUN yes | Android/Sdk/cmdline-tools/latest/bin/sdkmanager --licenses \
- && Android/Sdk/cmdline-tools/latest/bin/sdkmanager "platforms;$androidPlatformVersion" "build-tools;$androidBuildToolsVersion" "platforms;$androidSourcesPlatformVersion" "sources;$androidSourcesPlatformVersion"
-
-# RUN yes | Android/Sdk/cmdline-tools/latest/bin/sdkmanager --licenses
+# RUN yes | Android/Sdk/cmdline-tools/latest/bin/sdkmanager --licenses \
+ # && Android/Sdk/cmdline-tools/latest/bin/sdkmanager "platforms;$androidPlatformVersion" "build-tools;$androidBuildToolsVersion" "sources;$androidPlatformVersion" "platforms;$androidPlatformPreviewVersion" "build-tools;$androidBuildToolsPreviewVersion" "cmake;$cmakeVersion" "ndk;$ndkVersion"
 
 ENV ANDROID_SDK_ROOT="$HOME/Android/Sdk"
 
